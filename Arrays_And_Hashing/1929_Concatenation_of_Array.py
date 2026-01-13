@@ -8,4 +8,21 @@ Specifically, ans is the concatenation of two nums arrays.
 Return the array ans.
 """
 
-# Solution:
+## Solution:
+class Solution:
+    def getConcatenation(self, nums: List[int]) -> List[int]:
+        return nums+nums
+
+## Alternate Solution
+class Solution:
+    def getConcatenation(self, nums: List[int]) -> List[int]:
+        ans=[0]*len(nums)*2
+        j=0
+        for i in range(0, len(nums)):
+            ans[j]=nums[i]
+            j+=1
+
+        for i in range(0, len(nums)):
+            ans[j]=nums[i]
+            j+=1
+        return ans
